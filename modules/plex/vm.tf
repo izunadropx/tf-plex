@@ -6,7 +6,7 @@ resource "proxmox_vm_qemu" "plex" {
 
   # Cloud init options
   cicustom  = "user=IZU-HL-ISOS:snippets/${var.hostname}_user_data.yml"
-  ipconfig0 = "ip=10.0.0.11/24,gw=10.0.0.1"
+  ipconfig0 = "ip=10.0.0.10/24,gw=10.0.0.1"
   cores     = 4
   memory    = 2048
   agent     = 1
