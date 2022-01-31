@@ -10,9 +10,9 @@ variable "pve_host" {
 }
 
 variable "hostname" {
-  
+
 }
 
 variable "domain_name" {
-    
+
 }

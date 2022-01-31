@@ -1,8 +1,8 @@
 resource "proxmox_vm_qemu" "plex" {
-    name = "IZU-HL-PLEX"
-    target_node = "IZU-HL-PVE03"
-    os_type = "cloud-init"
-    clone   = "debian-cloudinit"
+  name        = "IZU-HL-PLEX"
+  target_node = "IZU-HL-PVE03"
+  os_type     = "cloud-init"
+  clone       = "debian-cloudinit"
 
   # Cloud init options
   cicustom  = "user=IZU-HL-ISOS:snippets/${var.hostname}_user_data.yml"
@@ -19,6 +19,7 @@ resource "proxmox_vm_qemu" "plex" {
     size    = "10G"
     type    = "scsi"
     storage = "IZU-HL-ZFS"
+    cache   = "writethrough"
   }
   network {
     model  = "virtio"
