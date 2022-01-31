@@ -61,7 +61,7 @@ resource "null_resource" "cloud_init_config_files" {
 
   provisioner "file" {
     source      = local_file.cloud_init_user_data_file.filename
-    destination = "/mnt/pve/IZU-HL-ISOS/snippets/user_data.yml"
+    destination = "/mnt/pve/IZU-HL-ISOS/snippets/${var.hostname}_user_data.yml"
 
     connection {
       type     = "ssh"
