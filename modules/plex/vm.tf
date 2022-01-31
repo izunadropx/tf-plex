@@ -1,5 +1,5 @@
 resource "proxmox_vm_qemu" "plex" {
-  name        = "IZU-HL-PLEX"
+  name        = "IZU-HL-PLEX01"
   target_node = "IZU-HL-PVE03"
   os_type     = "cloud-init"
   clone       = "debian-cloudinit"
