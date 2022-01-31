@@ -1,2 +1,2 @@
-@Library(jenkins_library)_
+@Library('jenkins_library')_
 deployTerraform
